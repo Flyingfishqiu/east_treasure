@@ -19,6 +19,7 @@ NEWSPIDER_MODULE = 'treasure.spiders'
 USER_AGENT =  "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
 
 
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -53,9 +54,11 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'treasure.middlewares.TreasureDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   # 'treasure.middlewares.TreasureDownloaderMiddleware': 543,
+    'treasure.middlewares.SeleniumMiddlerware': 300,
+}
+
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -65,9 +68,13 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'treasure.pipelines.TreasurePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   # 'treasure.pipelines.TreasurePipeline': 300,
+    'treasure.pipelines.TreasurePipeline' : 300,
+    'treasure.pipelines.TreasureJsonPipeline': 300,
+    'treasure.pipelines.TreasureMongoPipeline': 300,
+}
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
