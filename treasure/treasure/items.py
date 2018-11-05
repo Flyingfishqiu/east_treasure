@@ -11,11 +11,14 @@ import scrapy
 class TreasureItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    code = scrapy.Field()
+    time = scrapy.Field()
     name = scrapy.Field()
+    ranking = scrapy.Field()
+    code = scrapy.Field()
+
     top = scrapy.Field()
     plate = scrapy.Field()
-    link = scrapy.Field()
+    # link = scrapy.Field()
     day_open = scrapy.Field()
     highest = scrapy.Field()
     lowest = scrapy.Field()

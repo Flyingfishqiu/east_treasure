@@ -35,7 +35,6 @@ class TreasureJsonPipeline(object):
         self.write.export_item(item)
         return item
 
-
     def close_spider(self, spider):
         self.file.close()
         self.write.finish_exporting()

@@ -71,8 +71,8 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
    # 'treasure.pipelines.TreasurePipeline': 300,
     'treasure.pipelines.TreasurePipeline' : 300,
-    'treasure.pipelines.TreasureJsonPipeline': 300,
-    'treasure.pipelines.TreasureMongoPipeline': 300,
+    # 'treasure.pipelines.TreasureJsonPipeline': 400,
+    # 'treasure.pipelines.TreasureMongoPipeline': 500,
 }
 
 
